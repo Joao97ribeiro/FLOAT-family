@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The FLOAT Family: From Design to Digital Twin</title>
+  <meta name="description" content="The FLOAT family: physics and AI for fatigue-aware design and monitoring of floating offshore wind turbine towers (FLOAT, FLOATBench, NeuroFLOAT, FLOATSense).">
+  <meta property="og:title" content="The FLOAT Family: From Design to Digital Twin">
+  <meta property="og:description" content="One family of physics + AI tools on the IEA 22 MW floating reference turbine: a 25-year tower, an open benchmark, 5.4x fewer simulations and sensor-based load estimation.">
+  <meta property="og:image" content="figures/overview.png">
+  <link rel="icon" type="image/png" href="figures/logo_float.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <style>
+    .family-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
+    .family-card { border-top:5px solid var(--navy); display:flex; flex-direction:column; }
+    .family-card.is-ai { border-top-color: var(--red); }
+    .family-card .logo { height:56px; object-fit:contain; margin:0.25rem 0 0.75rem; }
+    .family-card .key { font-size:1.6rem; font-weight:700; line-height:1.15; margin:0.4rem 0 0.2rem; }
+    .family-card .buttons { margin-top:auto; padding-top:0.75rem; }
+    .step { display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:0.08em;
+            text-transform:uppercase; color:var(--ink-2); }
+    .flow { font-size:1.05rem; color:var(--ink); }
+    .flow b { color:var(--navy); }
+    .logo-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1.6rem 2.2rem; }
+    .logo-row img { height:38px; width:auto; }
+    .summit-banner { margin:0 0 1.5rem; padding:0.85rem 0; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; }
+    @media (max-width: 768px) { .family-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero is-light">
+  <div class="hero-body has-text-centered">
+    <div class="container is-max-desktop">
+      <p class="step" style="margin-bottom:0.6rem;">FLOAT &middot; FLOATBench &middot; NeuroFLOAT &middot; FLOATSense</p>
+      <h1 class="title is-2 publication-title" style="margin-bottom:0.6rem;">
+        The FLOAT Family: From Design to Digital Twin
+      </h1>
+      <h2 class="subtitle is-4" style="margin-bottom:1.5rem;color:#555;">
+        Physics and AI for Fatigue-Aware Floating Offshore Wind Towers
+      </h2>
+      <div class="is-size-5 publication-authors">
+        <span class="author-block"><a href="mailto:jpar@mit.edu">João Alves Ribeiro</a><sup>1,2,3</sup>,</span>
+        <span class="author-block">Bruno Alves Ribeiro<sup>4,5</sup>,</span>
+        <span class="author-block">Francisco Pimenta<sup>2</sup>,</span>
+        <span class="author-block">Sérgio M. O. Tavares<sup>3</sup>,</span>
+        <span class="author-block"><a href="mailto:faez@mit.edu">Faez Ahmed</a><sup>1</sup></span>
+      </div>
+      <div class="is-size-6 publication-affiliations" style="margin-top:0.4rem;">
+        <span><sup>1</sup>MIT</span> &nbsp;
+        <span><sup>2</sup>University of Porto</span> &nbsp;
+        <span><sup>3</sup>University of Aveiro</span> &nbsp;
+        <span><sup>4</sup>TU Delft</span> &nbsp;
+        <span><sup>5</sup>Brown University</span>
+      </div>
+
+      <div class="publication-links" style="margin-top:1.5rem;">
+        <a href="poster_usptsummit2026.pdf" class="button is-rounded is-dark">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Poster</span>
+        </a>
+        <a href="#family" class="button is-rounded is-dark">
+          <span class="icon"><i class="fas fa-layer-group"></i></span><span>The four projects</span>
+        </a>
+        <a href="https://github.com/Joao97ribeiro" class="button is-rounded is-dark">
+          <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+        </a>
+        <a href="https://huggingface.co/DeCoDELab" class="button is-rounded is-dark">
+          <span class="icon"><i class="fas fa-database"></i></span><span>Datasets</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="has-text-centered summit-banner">
+      <i class="fas fa-map-marker-alt" style="color:#b02c27;margin-right:0.6rem;"></i>
+      <span style="text-transform:uppercase;letter-spacing:0.1em;color:#b02c27;font-size:0.75rem;font-weight:700;">Poster</span>
+      &nbsp;&nbsp;
+      <span style="color:#2d3748;">Portugal&ndash;US Partnerships 2026 Summit &middot; University of Aveiro &middot; 30 October 2026</span>
+    </div>
+
+    <p class="has-text-centered" style="font-size:1.25rem;font-style:italic;color:#2d3748;margin-bottom:2rem;font-weight:500;">
+      The same structural physics governs design, simulation, learning and monitoring.
+    </p>
+
+    <figure class="image">
+      <img src="figures/overview.png" alt="FLOAT family overview: design, benchmark, simulation reduction and virtual sensing on the IEA 22 MW floating turbine">
+    </figure>
+
+    <h2 class="title is-3 has-text-centered" style="margin:2.5rem 0 2rem;">Highlights</h2>
+    <div class="highlights">
+      <div class="box has-text-centered highlight">
+        <p class="title is-3" style="color:#b02c27;">9 mo &rarr; 25 yr</p>
+        <p class="subtitle is-6">fatigue life of the IEA 22 MW floating tower after the FLOAT redesign</p>
+      </div>
+      <div class="box has-text-centered highlight">
+        <p class="title is-3" style="color:#294366;">Merged</p>
+        <p class="subtitle is-6">into the official IEA 22 MW reference model (NREL and DTU)</p>
+      </div>
+      <div class="box has-text-centered highlight">
+        <p class="title is-3" style="color:#b02c27;">5.4&times;</p>
+        <p class="subtitle is-6">fewer simulations per new tower (6,468 &rarr; 1,188), damage within ~0.5%</p>
+      </div>
+      <div class="box has-text-centered highlight">
+        <p class="title is-3" style="color:#294366;">582,120</p>
+        <p class="subtitle is-6">labelled samples in an open benchmark for AI generalisation</p>
+      </div>
+      <div class="box has-text-centered highlight">
+        <p class="title is-3" style="color:#7cc0cd;">11 heights</p>
+        <p class="subtitle is-6">of tower bending moment estimated from nacelle sensors</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE FOUR PROJECTS ============ -->
+<section class="section has-background-light" id="family">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">One family, four projects</h2>
+    <p class="has-text-centered flow" style="margin-bottom:2rem;">
+      <b>1</b> design &rarr; <b>2</b> benchmark &rarr; <b>3</b> simulate less &rarr; <b>4</b> monitor
+    </p>
+
+    <div class="family-grid">
+      <div class="box family-card">
+        <span class="step">1 &middot; Design</span>
+        <img class="logo" src="figures/logo_float.png" alt="FLOAT logo">
+        <p><b>FLOAT</b> redesigns the IEA 22 MW floating tower for fatigue with probabilistic wind-wave sampling, OpenFAST campaigns on cloud computing and a fatigue-aware optimiser, verified by full re-simulation.</p>
+        <p class="key" style="color:#b02c27;">~9 months &rarr; 25 years</p>
+        <div class="buttons">
+          <a class="button is-small is-rounded is-dark" href="https://joao97ribeiro.github.io/FLOAT/"><span class="icon"><i class="fas fa-globe"></i></span><span>Project page</span></a>
+          <a class="button is-small is-rounded is-dark" href="https://doi.org/10.1016/j.oceaneng.2026.126285"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span></a>
+          <a class="button is-small is-rounded is-dark" href="https://github.com/Joao97ribeiro/FLOAT"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
+          <a class="button is-small is-rounded is-dark" href="https://github.com/Joao97ribeiro/FLOAT-22-280-RWT-Semi"><span class="icon"><i class="fas fa-cube"></i></span><span>Tower model</span></a>
+        </div>
+      </div>
+
+      <div class="box family-card is-ai">
+        <span class="step">2 &middot; Benchmark</span>
+        <img class="logo" src="figures/logo_floatbench.png" alt="FLOATBench logo">
+        <p><b>FLOATBench</b> turns the simulations into an open tabular dataset and a regime-aware benchmark that tests whether AI surrogates stay reliable outside their training conditions.</p>
+        <p class="key" style="color:#b02c27;">Rankings invert under extrapolation</p>
+        <div class="buttons">
+          <a class="button is-small is-rounded is-dark" href="https://joao97ribeiro.github.io/FLOATBench/"><span class="icon"><i class="fas fa-globe"></i></span><span>Project page</span></a>
+          <a class="button is-small is-rounded is-dark" href="https://arxiv.org/abs/2605.25717"><span class="icon"><i class="fas fa-archive"></i></span><span>arXiv</span></a>
+          <a class="button is-small is-rounded is-dark" href="https://github.com/Joao97ribeiro/FLOATBench"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
+          <a class="button is-small is-rounded is-dark" href="https://huggingface.co/datasets/DeCoDELab/FLOATBench"><span class="icon"><i class="fas fa-database"></i></span><span>Dataset</span></a>
+        </div>
+      </div>
+
+      <div class="box family-card">
+        <span class="step">3 &middot; Simulate less</span>
+        <p class="title is-4" style="margin:0.4rem 0 0.9rem;color:#294366;">NeuroFLOAT</p>
+        <p><b>NeuroFLOAT</b> simulates only a physics-selected 3&times;3 subset of the wind-wave plane and lets an AI surrogate reconstruct the omitted sea states for each new tower design.</p>
+        <p class="key" style="color:#b02c27;">5.4&times; fewer simulations</p>
+        <div class="buttons">
+          <span class="button is-small is-rounded is-static">Manuscript under review</span>
+        </div>
+      </div>
+
+      <div class="box family-card is-ai">
+        <span class="step">4 &middot; Monitor</span>
+        <img class="logo" src="figures/logo_floatsense.png" alt="FLOATSense logo">
+        <p><b>FLOATSense</b> reconstructs the fore-aft bending moment at 11 tower heights from a tower-top accelerometer and SCADA signals, comparing a physics baseline with 19 learned time-series models.</p>
+        <p class="key" style="color:#b02c27;">Height matters: the base winner can fail at the top</p>
+        <div class="buttons">
+          <a class="button is-small is-rounded is-dark" href="https://joao97ribeiro.github.io/FLOATSense/"><span class="icon"><i class="fas fa-globe"></i></span><span>Project page</span></a>
+          <a class="button is-small is-rounded is-dark" href="https://github.com/Joao97ribeiro/FLOATSense"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
+          <a class="button is-small is-rounded is-dark" href="https://huggingface.co/datasets/DeCoDELab/FLOATSense"><span class="icon"><i class="fas fa-database"></i></span><span>Dataset</span></a>
+        </div>
+      </div>
+    </div>
+
+    <p class="has-text-centered" style="margin-top:1.5rem;color:#555;">
+      Background and AI roadmap: <a href="https://doi.org/10.1016/j.apenergy.2025.126294">Offshore wind turbine tower design and optimization: A review and AI-driven future directions</a> (Applied Energy, 2025).
+    </p>
+  </div>
+</section>
+
+<!-- ============ IMPACT ============ -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column">
+        <h2 class="title is-4" style="color:#294366;">For industry</h2>
+        <div class="content">
+          <p><b>Before installation</b>, a faster design loop: designers and certifiers evaluate new tower concepts with far fewer simulations.</p>
+          <p><b>After installation</b>, tower loads estimated from nacelle sensors, validated in simulation; field validation is the next step.</p>
+        </div>
+      </div>
+      <div class="column">
+        <h2 class="title is-4" style="color:#294366;">Portugal&ndash;US partnership</h2>
+        <div class="content">
+          <p>Developed within the MIT Portugal Program, linking the University of Porto and the University of Aveiro with MIT and Brown, TU Delft and the IEA Wind reference-turbine community.</p>
+          <p>Continues in MIT Portugal projects on generative structural design and physics-informed digital twins.</p>
+        </div>
+      </div>
+    </div>
+    <p class="has-text-centered" style="font-size:1.3rem;font-weight:700;color:#b02c27;margin-top:1rem;">
+      Physics provides reliability, AI provides scale.
+    </p>
+  </div>
+</section>
+
+<!-- ============ ACKNOWLEDGEMENTS ============ -->
+<section class="section has-background-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Acknowledgements</h2>
+    <div class="content has-text-justified">
+      <p>This work was funded by the FCT doctoral scholarship SFRH/BD/151364/2021 under the MIT Portugal Program and by the MIT Portugal 2024 Seed Project <em>Model-Based Digital Twins Supported on Physics-Informed Machine Learning for Multiphysics Analysis</em> (<a href="https://doi.org/10.54499/2024.14532.MIT">10.54499/2024.14532.MIT</a>). Simulations use <a href="https://github.com/OpenFAST/openfast">OpenFAST</a> on the <a href="https://github.com/IEAWindSystems/IEA-22-280-RWT">IEA-22-280-RWT</a> reference turbine.</p>
+    </div>
+    <div class="logo-row" style="margin-top:1.5rem;">
+      <img src="figures/logo_mitportugal.png" alt="MIT Portugal">
+      <img src="figures/logo_fct.png" alt="FCT">
+      <img src="figures/partner_mit.png" alt="MIT">
+      <img src="figures/partner_decode.png" alt="DeCoDE Lab">
+      <img src="figures/partner_feup.png" alt="FEUP, University of Porto">
+      <img src="figures/partner_uaveiro_side.png" alt="University of Aveiro">
+      <img src="figures/partner_tudelft.png" alt="TU Delft">
+      <img src="figures/partner_brown.png" alt="Brown University">
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>Page template adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
